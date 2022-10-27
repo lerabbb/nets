@@ -62,7 +62,7 @@ public class Downloader implements Runnable{
             logger.info("Client " + socket.getInetAddress() + ": " + protocol.getFileSize() + " bytes must be received");
             while((bytesRead = din.read(content, 0, Constants.BLOCK)) >= 0){
                 fileSize += bytesRead;
-                synchronized (speedCounter.lock){
+                synchronized (speedCounter){
                     bytesForPeriod += bytesRead;
                 }
                 fos.write(content);

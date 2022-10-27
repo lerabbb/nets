@@ -7,17 +7,14 @@ public class SpeedCounter implements Runnable{
     private long startTime;
     private long totalTime;
 
-    public final Object lock;
-
     private Logger logger;
 
-    SpeedCounter(Object object, Logger logger){
+    public SpeedCounter(Object object, Logger logger){
         this.downloader = (Downloader) object;
         this.instantBytes = 0;
         this.startTime = System.currentTimeMillis();
         this.totalTime = 0;
         this.totalBytes = 0;
-        this.lock = new Object();
         this.logger = logger;
     }
 
@@ -25,7 +22,7 @@ public class SpeedCounter implements Runnable{
     public void run() {
         totalTime = System.currentTimeMillis() - startTime;
 
-        synchronized (lock) {
+        synchronized (this) {
             instantBytes = downloader.getBytesForPeriod();
             downloader.resetBytesForPeriod();
         }
