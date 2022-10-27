@@ -1,6 +1,7 @@
 import exceptions.InvalidFileNameException;
 import exceptions.InvalidFileSizeException;
 import exceptions.InvalidPortException;
+import org.apache.commons.lang3.SerializationUtils;
 
 import java.io.*;
 import java.net.Socket;
@@ -38,7 +39,7 @@ public class Client {
         FileInputStream fin = new FileInputStream(file);
         DataOutputStream din = new DataOutputStream(socket.getOutputStream());
 
-        byte[] obj = Serializer.serialize(new MyProtocol(fileName, file.length()));
+        byte[] obj = SerializationUtils.serialize(new MyProtocol(fileName, file.length()));
         din.writeInt(obj.length);
         din.write(obj);
 

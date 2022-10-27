@@ -1,5 +1,6 @@
 import exceptions.FileCreateException;
 import exceptions.ProtocolNotSentException;
+import org.apache.commons.lang3.SerializationUtils;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -42,7 +43,7 @@ public class Downloader implements Runnable{
             if(din.read(obj, 0, obj.length) < 0){
                 throw new ProtocolNotSentException();
             }
-            MyProtocol protocol = (MyProtocol) Serializer.deserialize(obj);
+            MyProtocol protocol = SerializationUtils.deserialize(obj);
             logger.info("Client " +  socket.getInetAddress() + ": protocol received");
             if(protocol.getFileSize() <= 0){
                 throw new FileNotFoundException();
@@ -75,7 +76,7 @@ public class Downloader implements Runnable{
             answerToClient(fileSize, protocol.getFileSize());
             socket.close();
             logger.info("Client " + socket.getInetAddress() + " disconnected");
-        } catch(IOException | ClassNotFoundException | FileCreateException | ProtocolNotSentException e){
+        } catch(IOException | FileCreateException | ProtocolNotSentException e){
             logger.severe("Client " + socket.getInetAddress() + ": " + e);
         }
     }
