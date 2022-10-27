@@ -6,8 +6,8 @@ This client-server program transfers a file by TCP. Client sends any file to ser
 
 
 * To run client module:\
-./gradlew client:run --args='<file name> <addr> <port>'
+./gradlew client:run --args='file.txt 127.0.0.1 8888'
 
 
 * To run server module:\
-./gradlew server:run --args='<port>'
+./gradlew server:run --args='8888'
