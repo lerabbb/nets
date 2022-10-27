@@ -2,3 +2,6 @@ gradle/
 build/
 .idea/
 .gradle/
+server/src/main/resources/uploads/
+server/src/main/resources/server.log
+client/src/main/resources/*
