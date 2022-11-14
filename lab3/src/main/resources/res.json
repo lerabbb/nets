@@ -1,0 +1,29 @@
+{
+  "xid":"W267214563",
+  "name":"Charles I",
+  "address":{
+    "city":"London",
+    "state":"England",
+    "suburb":"Covent Garden",
+    "country":"United Kingdom",
+    "country_code":"gb",
+    "neighbourhood":"St. James's",
+    "state_district":"Greater London"
+  },
+  "rate":"3h",
+  "osm":"way/267214563",
+  "bbox":{"lon_min":-0.127676,"lon_max":-0.127635,"lat_min":51.507302,"lat_max":51.507332},
+  "wikidata":"Q7604492",
+  "kinds":"historic,monuments_and_memorials,urban_environment,cultural,interesting_places,sculptures,monuments",
+  "sources":{"geometry":"osm","attributes":["osm","wikidata"]},
+  "otm":"https://opentripmap.com/ru/card/W267214563",
+  "wikipedia":"https://en.wikipedia.org/wiki/Equestrian%20statue%20of%20Charles%20I%2C%20Charing%20Cross",
+  "image":"https://commons.wikimedia.org/wiki/File:Charles_I%2C_Trafalgar_Square.jpg",
+  "preview":{
+    "source":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Charles_I%2C_Trafalgar_Square.jpg/266px-Charles_I%2C_Trafalgar_Square.jpg","height":400,"width":266},
+  "wikipedia_extracts":{
+    "title":"en:Equestrian statue of Charles I, Charing Cross",
+    "text":"The equestrian statue of Charles I at Charing Cross, London, is a work by the French sculptor Hubert Le Sueur, probably cast in 1633. It is considered the central point of London.Its location at Charing Cross is on the former site of the most elaborate of the Eleanor crosses erected by Edward I, which had stood for three and a half centuries until 1647. Charing Cross is used to define the centre of London and a plaque by the statue indicates that road signage distances are measured from this point. The statue faces down Whitehall towards Charles I's place of execution at Banqueting House.",
+    "html":"<p>The <b>equestrian statue of Charles I</b> at Charing Cross, London, is a work by the French sculptor Hubert Le Sueur, probably cast in 1633. It is considered the central point of London.</p><p>Its location at Charing Cross is on the former site of the most elaborate of the Eleanor crosses erected by Edward I, which had stood for three and a half centuries until 1647. Charing Cross is used to define the centre of London and a plaque by the statue indicates that road signage distances are measured from this point. The statue faces down Whitehall towards Charles I's place of execution at Banqueting House.</p>",
+  },
+  "point":{"lon":-0.12765540182590485,"lat":51.50731658935547}}

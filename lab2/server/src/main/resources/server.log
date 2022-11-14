@@ -1,14 +1,10 @@
-[2022-10-19 18:43:40] [INFO   ] Server started working 
-[2022-10-19 18:44:10] [INFO   ] Client /127.0.0.1: connected 
-[2022-10-19 18:44:10] [INFO   ] Client /127.0.0.1: downloader started 
-[2022-10-19 18:44:10] [INFO   ] Client /127.0.0.1: protocol received 
-[2022-10-19 18:44:10] [WARNING] file chekhov_kashtanka.txt already exists. Creating a file (1)chekhov_kashtanka.txt 
-[2022-10-19 18:44:10] [WARNING] file (1)chekhov_kashtanka.txt already exists. Creating a file (2)chekhov_kashtanka.txt 
-[2022-10-19 18:44:10] [WARNING] file (2)chekhov_kashtanka.txt already exists. Creating a file (3)chekhov_kashtanka.txt 
-[2022-10-19 18:44:10] [INFO   ] File (3)chekhov_kashtanka.txt was created 
-[2022-10-19 18:44:10] [INFO   ] Client /127.0.0.1: 67685 bytes must be received 
-[2022-10-19 18:44:10] [INFO   ] Client /127.0.0.1:	instant speed = 0 b/s | total speed = 0 b/s 
-[2022-10-19 18:44:13] [INFO   ] Client /127.0.0.1:	instant speed = 22 b/s | total speed = 22 b/s 
-[2022-10-19 18:44:16] [INFO   ] Client /127.0.0.1:	instant speed = 0 b/s | total speed = 11 b/s 
-[2022-10-19 18:44:16] [INFO   ] Client /127.0.0.1: 67685 bytes actually received 
-[2022-10-19 18:44:16] [INFO   ] Client /127.0.0.1 disconnected 
+[2022-11-06 17:42:23] [INFO   ] Server started working 
+[2022-11-06 17:43:39] [INFO   ] Client /127.0.0.1: connected 
+[2022-11-06 17:43:39] [INFO   ] Client /127.0.0.1: downloader started 
+[2022-11-06 17:43:39] [INFO   ] Client /127.0.0.1: protocol received 
+[2022-11-06 17:43:39] [WARNING] file chekhov_kashtanka.txt already exists. Creating a file (1)chekhov_kashtanka.txt 
+[2022-11-06 17:43:39] [INFO   ] File (1)chekhov_kashtanka.txt was created 
+[2022-11-06 17:43:39] [INFO   ] Client /127.0.0.1:	instant speed = 0 b/s | total speed = 0 b/s 
+[2022-11-06 17:43:39] [INFO   ] Client /127.0.0.1: 68106 bytes must be received 
+[2022-11-06 17:43:39] [INFO   ] Client /127.0.0.1: 68106 bytes actually received 
+[2022-11-06 17:43:39] [INFO   ] Client /127.0.0.1 disconnected 
