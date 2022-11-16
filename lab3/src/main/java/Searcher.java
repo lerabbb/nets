@@ -14,12 +14,10 @@ import java.util.concurrent.CompletableFuture;
 
 public class Searcher {
     private HttpClient httpClient;
-    private KeyUtils keyUtils;
     private Gson gson;
 
     public Searcher() throws IOException {
         this.httpClient = HttpClient.newBuilder().build();
-        this.keyUtils = new KeyUtils();
         this.gson = new Gson();
     }
 
@@ -27,7 +25,7 @@ public class Searcher {
         String GhRequestString = String.format("%s?q=%s&key=%s",
                 Constants.GEOCODE_URL,
                 placeName,
-                keyUtils.getGraphHopperApiKey());
+                KeyUtils.getGraphHopperApiKey());
 
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
@@ -44,7 +42,7 @@ public class Searcher {
                 Constants.WEATHER_URL,
                 place.getLat(),
                 place.getLng(),
-                keyUtils.getOpenWeatherApiKey());
+                KeyUtils.getOpenWeatherApiKey());
 
         HttpRequest owRequest = HttpRequest.newBuilder()
                 .GET()
@@ -62,7 +60,7 @@ public class Searcher {
                 radius,
                 place.getLng(),
                 place.getLat(),
-                keyUtils.getOtmApiKey());
+                KeyUtils.getOtmApiKey());
 
         HttpRequest otmRequest = HttpRequest.newBuilder()
                 .GET()
@@ -79,7 +77,7 @@ public class Searcher {
         Attraction[] attrs = gson.fromJson(content, Attraction[].class);
 
         for (Attraction attr : attrs) {
-            String requestString = String.format("%s?apikey=%s", Constants.OTM_INFO_URL+attr.getXid(), keyUtils.getOtmApiKey());
+            String requestString = String.format("%s?apikey=%s", Constants.OTM_INFO_URL+attr.getXid(), KeyUtils.getOtmApiKey());
             HttpRequest request = HttpRequest.newBuilder().GET().uri(URI.create(requestString)).build();
 
             httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())

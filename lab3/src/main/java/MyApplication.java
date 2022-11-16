@@ -6,6 +6,7 @@ public class MyApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        KeyUtils.initializeKeys();
         Controller controller = new Controller();
         View view = new View(controller, primaryStage);
         controller.setView(view);
