@@ -34,9 +34,8 @@ public class Controller {
 
         //send a GET request to api
         String placeName = view.getPlaceName();
-        searcher.makeGhRequest(placeName).thenAccept(foundPlaces -> {
-            Platform.runLater(() -> view.drawPlacesResultsScene(foundPlaces));
-        });
+        searcher.makeGhRequest(placeName)
+                .thenAcceptAsync(foundPlaces -> view.drawPlacesResultsScene(foundPlaces), Platform::runLater);
 
         Platform.runLater(() -> view.drawWaitScene());
     }
@@ -58,19 +57,12 @@ public class Controller {
         radius = Integer.parseInt(inputRadius);
 
         //switch scene to description
-        searcher.makeOwRequest(chosenPlace).thenAccept(weather -> {
-            Platform.runLater(() -> view.drawWeatherDesc(weather.toString()));
-        });
+        searcher.makeOwRequest(chosenPlace)
+                .thenAcceptAsync(weather -> view.drawWeatherDesc(weather.toString()), Platform::runLater);
 
-        searcher.makeOtmRequest(chosenPlace, radius).thenAccept(attractions ->{
-            Platform.runLater(() -> view.drawAttractDesc(attractions));
-        });
+        searcher.makeOtmRequest(chosenPlace, radius)
+                .thenAcceptAsync(attractions -> view.drawAttractDesc(attractions), Platform::runLater);
 
-        Platform.runLater(()->{
-            view.drawPlaceDescScene(chosenPlace.toString());
-        });
+        Platform.runLater(()-> view.drawPlaceDescScene(chosenPlace.toString()));
     }
-
-
-
 }

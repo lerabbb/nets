@@ -16,7 +16,7 @@ public class Searcher {
     private HttpClient httpClient;
     private Gson gson;
 
-    public Searcher() throws IOException {
+    public Searcher() {
         this.httpClient = HttpClient.newBuilder().build();
         this.gson = new Gson();
     }
