@@ -1,0 +1,31 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+mainClassName = "MyApplication"
+
+repositories {
+    mavenCentral()
+}
+
+compileJava.options.encoding = 'UTF-8'
+tasks.withType(JavaCompile){
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.10'
+}
+
+javafx {
+    version = '19'
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+run{
+    standardInput = System.in
+}

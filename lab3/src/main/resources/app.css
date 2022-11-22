@@ -1,0 +1,20 @@
+.root{
+    -fx-pref-height: 600.0;
+    -fx-pref-width: 800.0;
+    -fx-background-color: #92A7BB;
+}
+
+.text-field{
+    -fx-pref-width: 400.0;
+    -fx-pref-height: 26.0;
+}
+
+#headerLabel{
+    -fx-alignment: "CENTER";
+    -fx-font-size: 16.0;
+}
+
+.label{
+    -fx-font-size: 16.0;
+}
+
