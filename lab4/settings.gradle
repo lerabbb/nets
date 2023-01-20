@@ -1,0 +1,4 @@
+rootProject.name = 'nets4'
+include 'game'
+include 'snake'
+
