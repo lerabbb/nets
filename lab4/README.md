@@ -1,4 +1,4 @@
-#Nets. Lab4 "Snake"
+#Nets. Lab4 "Snake"\
 Game "Snake" with multiplayer and peer-to-peer communication.
 
 * Build project:\
